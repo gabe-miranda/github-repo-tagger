@@ -8,12 +8,11 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 
 ## Requisitos
 ### Backend
-- [ ] PHP 7.x com Laravel 6+
--  MVCs
-  - [ ] Model
-  - [ ] View
-  - [ ] Controller
-  - [ ] Service (Regras de negócio)
+- [x] PHP 7.x com Laravel 6+. (Usando PHP 7.4 com Laravel 7.x)
+- [ ] Model
+- [ ] View
+- [ ] Controller
+- [ ] Service (Regras de negócio)
 - [ ] Factory
 - [ ] Dependency Injection
 - [ ] Hexagonal **(Opcional)**
@@ -53,5 +52,15 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 - [x] Criar um repositório para o projeto no Github.
 - [ ] Criar um README com instruções de execução do projeto, bem como informações que julgar relevantes.
 - [ ] Utilizar Git Flow. **(Opcional)**
-- [ ] Utilizar Docker. **(Opcional)**
+- [x] Utilizar Docker. **(Opcional)**
 - [ ] Publicar em um servidor externo com url a aberta. **(Opcional)**
+
+
+## Rodando o projeto
+### Requisitos
+``docker e docker-compose``
+
+### Iniciando a aplicação
+Na raiz do projeto, rodar o comando ``docker-compose up -d --build site``.
+
+A aplicação vai estar disponível [aqui](localhost:8080).
