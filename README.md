@@ -50,7 +50,7 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 
 ## Desenvolvimento/Publicação
 - [x] Criar um repositório para o projeto no Github.
-- [ ] Criar um README com instruções de execução do projeto, bem como informações que julgar relevantes.
+- [x] Criar um README com instruções de execução do projeto, bem como informações que julgar relevantes.
 - [ ] Utilizar Git Flow. **(Opcional)**
 - [x] Utilizar Docker. **(Opcional)**
 - [x] Publicar em um servidor externo com url a aberta. **(Opcional)** (http://142.93.126.193/)
@@ -64,7 +64,8 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 Na raiz do projeto, rodar os seguintes comandos:
 1. ``docker-compose up -d --build site``.
 2. ``docker-compose run --rm composer install``.
-3. ``docker-compose run --rm artisan migrate``.
-4. ``docker-compose run --rm artisan key:generate``.
+3. ``cp src/.env.example src/.env``
+4. ``docker-compose run --rm artisan migrate``.
+5. ``docker-compose run --rm artisan key:generate``.
 
 A aplicação vai estar disponível [aqui](http://localhost:8080).
