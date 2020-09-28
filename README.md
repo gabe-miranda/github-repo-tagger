@@ -26,13 +26,13 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 
 ## Especificações Técnicas
 ### Busca
-- [ ] Utilizar a [API de busca do Github para Repositórios](https://docs.github.com/en/free-pro-team@latest/rest/reference/search#search-repositories).
-- [ ] Permitir buscar repositórios por termo.
-- [ ] Exibir resultados da busca de repositórios em formato de lista.
+- [x] Utilizar a [API de busca do Github para Repositórios](https://docs.github.com/en/free-pro-team@latest/rest/reference/search#search-repositories).
+- [x] Permitir buscar repositórios por termo.
+- [x] Exibir resultados da busca de repositórios em formato de lista.
 - [ ] Permitir que cada usuário logado possa associar as suas etiquetas (tags) aos repositórios listados.
-- [ ] Permitir ordenar resultados por estrelas ou data (ASC / DESC).
+- [x] Permitir ordenar resultados por estrelas ou data (ASC / DESC).
 - [ ] Utilizar paginação.
-- [ ] Filtrar por linguagem de programação. **(Opcional)**
+- [x] Filtrar por linguagem de programação. **(Opcional)**
 - [ ] Utilizar paginação infinita - Infinite Scroll. **(Opcional)**
 
 ### Usuário
@@ -61,6 +61,8 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 ``docker e docker-compose``
 
 ### Iniciando a aplicação
-Na raiz do projeto, rodar o comando ``docker-compose up -d --build site``.
+Na raiz do projeto, rodar os seguintes comandos:
+1. ``docker-compose up -d --build site``.
+2. ``docker-compose run --rm artisan migrate``.
 
 A aplicação vai estar disponível [aqui](localhost:8080).
