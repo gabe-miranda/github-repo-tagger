@@ -17,9 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tags', function () {
-    return 'User tags here!';
-});
+Route::post('/tags', 'Services\TagController@createTag')->name('tags.createTag');
+Route::get('/tags', 'Services\TagController@index');
 
 Route::get('/userRepos', function () {
     return 'User tagged repositories here!';
