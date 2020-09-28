@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/tags', function () {
+    return 'User tags here!';
+});
+
+Route::get('/userRepos', function () {
+    return 'User tagged repositories here!';
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
