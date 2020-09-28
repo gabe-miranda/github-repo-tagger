@@ -9,9 +9,9 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 ## Requisitos
 ### Backend
 - [x] PHP 7.x com Laravel 6+. (Usando PHP 7.4 com Laravel 7.x)
-- [ ] Model
-- [ ] View
-- [ ] Controller
+- [x] Model
+- [x] View
+- [x] Controller
 - [ ] Service (Regras de negócio)
 - [ ] Factory
 - [ ] Dependency Injection
@@ -19,10 +19,10 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 - [ ] DDD **(Opcional)**
 
 ### Frontend
-- [ ] HTML5
-- [ ] CSS3
-- [ ] Javascript
-- [ ] Templates com Blade **(Opcional)**
+- [x] HTML5
+- [x] CSS3
+- [x] Javascript (Usando scaffolding do Vue)
+- [x] Templates com Blade **(Opcional)**
 
 ## Especificações Técnicas
 ### Busca
@@ -36,11 +36,11 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 - [ ] Utilizar paginação infinita - Infinite Scroll. **(Opcional)**
 
 ### Usuário
-- [ ] Desenvolver seu sistema de usuários (Não utilizar o do Github).
-- [ ] Disponibilizar área de login.
+- [x] Desenvolver seu sistema de usuários (Não utilizar o do Github).
+- [x] Disponibilizar área de login.
 - [ ] Permitir adicionar, remover, editar e listar etiquetas (tags) por usuário.
 - [ ] Exibir relatório de repositórios por etiquetas (tags) do usuário.
-- [ ] Permitir registrar usuário.
+- [x] Permitir registrar usuário.
 - [ ] Permitir editar dados do usuário. **(Opcional)**
 
 ### Dashboard **(Opcional)**
