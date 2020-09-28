@@ -12,7 +12,7 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 - [x] Model
 - [x] View
 - [x] Controller
-- [ ] Service (Regras de negócio)
+- [x] Service (Regras de negócio) (Handlers)
 - [ ] Factory
 - [ ] Dependency Injection
 - [ ] Hexagonal **(Opcional)**
@@ -38,7 +38,7 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 ### Usuário
 - [x] Desenvolver seu sistema de usuários (Não utilizar o do Github).
 - [x] Disponibilizar área de login.
-- [ ] Permitir adicionar, remover, editar e listar etiquetas (tags) por usuário.
+- [x] Permitir adicionar, remover, editar e listar etiquetas (tags) por usuário.
 - [ ] Exibir relatório de repositórios por etiquetas (tags) do usuário.
 - [x] Permitir registrar usuário.
 - [ ] Permitir editar dados do usuário. **(Opcional)**
@@ -53,7 +53,7 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 - [ ] Criar um README com instruções de execução do projeto, bem como informações que julgar relevantes.
 - [ ] Utilizar Git Flow. **(Opcional)**
 - [x] Utilizar Docker. **(Opcional)**
-- [ ] Publicar em um servidor externo com url a aberta. **(Opcional)**
+- [x] Publicar em um servidor externo com url a aberta. **(Opcional)** (http://142.93.126.193/)
 
 
 ## Rodando o projeto
@@ -63,6 +63,8 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 ### Iniciando a aplicação
 Na raiz do projeto, rodar os seguintes comandos:
 1. ``docker-compose up -d --build site``.
-2. ``docker-compose run --rm artisan migrate``.
+2. ``docker-compose run --rm composer install``.
+3. ``docker-compose run --rm artisan migrate``.
+4. ``docker-compose run --rm artisan key:generate``.
 
-A aplicação vai estar disponível [aqui](localhost:8080).
+A aplicação vai estar disponível [aqui](http://localhost:8080).
