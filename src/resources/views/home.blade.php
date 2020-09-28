@@ -70,6 +70,7 @@
                     @endforeach
                     </tbody>
                 </table>
+                {{$response_data->links()}}
             @endif
         </div>
     </div>

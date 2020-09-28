@@ -4,15 +4,16 @@ namespace App\Github;
 
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 
 class GithubRequestHandler {
 
     private const API_URL = 'https://api.github.com/search/repositories';
 
-    public static function getResponseData(Request $request): array {
+    public static function getResponseData(Request $request) {
         $request_params = self::processRequestParams($request->all());
         $response_json = self::makeRequest($request_params);
-        return self::parseResponse($response_json);
+        return self::parseResponse($response_json)->paginate(10);
     }
 
     private static function processRequestParams(array $request_params): array {
@@ -38,7 +39,7 @@ class GithubRequestHandler {
         return $response->getBody()->getContents();
     }
 
-    private static function parseResponse(string $response_json): array {
+    private static function parseResponse(string $response_json): Collection {
         $parsed_response = [];
         $repositories_data = \GuzzleHttp\json_decode($response_json);
 
@@ -53,6 +54,6 @@ class GithubRequestHandler {
             ];
         }
 
-        return $parsed_response;
+        return collect($parsed_response);
     }
 }
