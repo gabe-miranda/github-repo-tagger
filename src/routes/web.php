@@ -25,6 +25,8 @@ Route::get('/userRepos', function () {
     return 'User tagged repositories here!';
 });
 
+Route::post('/home', 'HomeController@getData')->name('home.sendData');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
