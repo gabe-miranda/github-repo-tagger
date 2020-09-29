@@ -18,7 +18,7 @@
                             <th scope="col">Description</th>
                             <th scope="col">Language</th>
                             <th scope="col">Created At</th>
-                            <th scope="col">Tags</th>
+                            <th scope="col">Tag</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -30,7 +30,7 @@
                                 <td>{{$repository->description}}</td>
                                 <td>{{$repository->language}}</td>
                                 <td>{{$repository->created_at}}</td>
-                                <td>{{$repository->tags}}</td>
+                                <td>{{$repository->tag_name}}</td>
                             </tr>
                         @endforeach
                         </tbody>

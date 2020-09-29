@@ -21,6 +21,7 @@ Route::post('/tags', 'Services\TagController@createTag')->name('tags.createTag')
 Route::get('/tags', 'Services\TagController@index');
 
 Route::post('/tagRepo', 'Services\RepositoryController@tagRepository')->name('repo.attachTag');
+Route::post('/persistTag', 'Services\RepositoryController@persistTag')->name('repo.persistTag');
 Route::get('/userRepos', 'Services\RepositoryController@index');
 
 Route::post('/home', 'HomeController@getData')->name('home.sendData');
