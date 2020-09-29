@@ -41,37 +41,33 @@
                 </div>
             </div>
         </div>
-        <div>
-            @if(isset($response_data))
-                <hr>
-                <table class="table table-striped table-hover">
-                    <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Full Name</th>
-                        <th scope="col">Stars</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Language</th>
-                        <th scope="col">Created At</th>
-                        <th></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($response_data as $repository)
-                        <tr>
-                            <td>{{$repository->name}}</td>
-                            <td>{{$repository->full_name}}</td>
-                            <td>{{$repository->stars}}</td>
-                            <td>{{$repository->description}}</td>
-                            <td>{{$repository->language}}</td>
-                            <td>{{$repository->created_at}}</td>
-                            <td><button class="btn btn-primary">Tag</button></td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
-            @endif
-        </div>
     </div>
+</div>
+<hr>
+<div class="container">
+@if(isset($response_data))
+    <div class="row table-header">
+        <div class="col"><strong>Name</strong></div>
+        <div class="col"><strong>Full Name</strong></div>
+        <div class="col"><strong>Stars</strong></div>
+        <div class="col"><strong>Description</strong></div>
+        <div class="col"><strong>Language</strong></div>
+        <div class="col"><strong>Created At</strong></div>
+    </div>
+    @foreach($response_data as $repository)
+        <form action="{{route('repo.attachTag')}}" method="post">
+            {{csrf_field()}}
+            <div class="row table-rows form-group">
+                <div class="col"><input type="text" readonly class="form-control-plaintext" name="name" value="{{$repository->name}}"></div>
+                <div class="col"><input type="text" readonly class="form-control-plaintext" name="fullName" value="{{$repository->full_name}}"></div>
+                <div class="col"><input type="text" readonly class="form-control-plaintext" name="stars" value="{{$repository->stars}}"></div>
+                <div class="col"><textarea style="resize: none" readonly class="form-control-plaintext" rows="5" name="description">{{$repository->description}}</textarea></div>
+                <div class="col"><input type="text" readonly class="form-control-plaintext" name="language" value="{{$repository->language}}"></div>
+                <div class="col"><input type="text" readonly class="form-control-plaintext" name="createdAt" value="{{$repository->created_at}}"></div>
+                <div class="col- align-self-center"><button class="btn btn-primary" type="submit">Tag</button></div>
+            </div>
+        </form>
+    @endforeach
+@endif
 </div>
 @endsection

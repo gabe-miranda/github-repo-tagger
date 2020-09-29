@@ -20,9 +20,8 @@ Route::get('/', function () {
 Route::post('/tags', 'Services\TagController@createTag')->name('tags.createTag');
 Route::get('/tags', 'Services\TagController@index');
 
-Route::get('/userRepos', function () {
-    return 'User tagged repositories here!';
-});
+Route::post('/tagRepo', 'Services\RepositoryController@tagRepository')->name('repo.attachTag');
+Route::get('/userRepos', 'Services\RepositoryController@index');
 
 Route::post('/home', 'HomeController@getData')->name('home.sendData');
 

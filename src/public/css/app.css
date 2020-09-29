@@ -4399,6 +4399,16 @@ input[type=button].btn-block {
   }
 }
 
+.table-header {
+    border: 1px solid #454d55;
+    color: #fff;
+    background-color: #343a40;
+}
+
+.table-rows{
+    border-bottom: 1px solid #dfdfdf;
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
