@@ -5,6 +5,11 @@
         </div>
         <div class="card-body">
             <ul class="nav">
+                <li class="nav-link col-md-12">
+                    <a href="{{ url('/home') }}">
+                        Home
+                    </a>
+                </li>
                 <li class="nav-link">
                     <a href="{{ url('/tags') }}">
                         Tags
