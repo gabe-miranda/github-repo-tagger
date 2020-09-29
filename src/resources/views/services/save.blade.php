@@ -9,8 +9,9 @@
                 <div class="card">
                     <div class="card-header">{{'Tag repository'}}</div>
                     @if(!empty($repoData))
-                            <div class="card-body">
-                                <form>
+                        <div class="card-body">
+                            <form action="{{route('repo.persistTag')}}" method="post">
+                                    {{csrf_field()}}
                                     <div class="form-group row">
                                         <label for="repoName" class="col-sm-2 col-form-label">Name:</label>
                                         <div class="col-sm-10">
@@ -50,16 +51,16 @@
                                     <div class="form-group row">
                                         <label for="availableTags" class="col-sm-2 col-form-label">Tag:</label>
                                         <div class="col-sm-5">
-                                            <select id="availableTags" class="form-control">
+                                            <select id="availableTags" class="form-control" name="tag" required>
                                                 @foreach($availableTags as $tag)
                                                     <option value="{{$tag->id}}">{{$tag->name}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
                                     </div>
-                                    <button class="btn btn-primary">Save tag</button>
-                                </form>
-                            </div>
+                                    <button class="btn btn-primary" type="submit">Save tag</button>
+                            </form>
+                        </div>
                     @endif
                 </div>
             </div>

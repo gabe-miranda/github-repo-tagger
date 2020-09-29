@@ -29,7 +29,7 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 - [x] Utilizar a [API de busca do Github para Repositórios](https://docs.github.com/en/free-pro-team@latest/rest/reference/search#search-repositories).
 - [x] Permitir buscar repositórios por termo.
 - [x] Exibir resultados da busca de repositórios em formato de lista.
-- [ ] Permitir que cada usuário logado possa associar as suas etiquetas (tags) aos repositórios listados.
+- [x] Permitir que cada usuário logado possa associar as suas etiquetas (tags) aos repositórios listados.
 - [x] Permitir ordenar resultados por estrelas ou data (ASC / DESC).
 - [ ] Utilizar paginação.
 - [x] Filtrar por linguagem de programação. **(Opcional)**
@@ -39,7 +39,7 @@ Vale ressaltar que cada usuário poderá visualizar apenas suas próprias etique
 - [x] Desenvolver seu sistema de usuários (Não utilizar o do Github).
 - [x] Disponibilizar área de login.
 - [x] Permitir adicionar, remover, editar e listar etiquetas (tags) por usuário.
-- [ ] Exibir relatório de repositórios por etiquetas (tags) do usuário.
+- [x] Exibir relatório de repositórios por etiquetas (tags) do usuário.
 - [x] Permitir registrar usuário.
 - [ ] Permitir editar dados do usuário. **(Opcional)**
 
